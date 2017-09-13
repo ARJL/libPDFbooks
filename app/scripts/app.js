@@ -24,6 +24,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/connect', {
+        templateUrl: 'views/connect.html',
+        controller: 'ConnectCtrl',
+        controllerAs: 'connect'
+      })
       .otherwise({
         redirectTo: '/'
       });
