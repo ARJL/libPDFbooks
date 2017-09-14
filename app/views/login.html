@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="styles/login.css" />
+<section id="content" ng-submit="formSubmit()" class="form">
+	<form action="">
+		<h1>Login Form</h1>
+		<div>
+			<input type="text" placeholder="Username" required="" id="username" ng-model="username" />
+		</div>
+		<div>
+			<input type="password" placeholder="Password" required="" id="password" ng-model="password" />
+		</div>
+		<div>
+			<input type="submit" value="Log in" />
+			<span class="text-danger">{{ error }}</span>
+			<a href="#">Lost your password?</a>
+			<a href="#!/register">Sign up</a>
+		</div>
+	</form><!-- form -->
+	
+</section><!-- content -->

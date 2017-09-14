@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="styles/register.css" />
+<section id="content" ng-submit="formSubmit()" class="form">
+	<form action="">
+		<h1>Sign Up Form</h1>
+		<div>
+			<input type="text" placeholder="Username" required="" id="username" ng-model="username" />
+
+		</div>
+		<div>
+			<input type="email" placeholder="Email" required="" id="password" ng-model="email" />
+			<p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
+		</div>
+		<div>
+			<input type="password" placeholder="Password" required="" id="password" ng-model="password" />
+			<p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
+		</div>
+		<div class="birth">
+	      <span>
+	        <label > Day: </label>
+		    <select  ng-model="day" >
+		      <option ng-repeat="day in days" value="{{day}}" required="">{{day}}</option>
+		    </select>
+	      </span>
+	     <span>
+	        <label > Month: </label>
+		    <select  ng-model="month">
+		      <option ng-repeat="month in months" value="{{month}}"required="">{{month}}</option>
+		    </select>
+	      </span>
+	      <span>
+	        <label > Year: </label>	
+		    <select  ng-model="year" >
+		      <option ng-repeat="year in years" value="{{year}}" required="">{{year}}</option>
+		    </select>
+	      </span>
+	    </div>
+	    <div class="gender">
+	    	<label><input type="radio" name="SGender" ng-change="RadioChange('Male')" ng-model="gender" value="Male" /> Male </label>
+    		<label><input type="radio" name="SGender" ng-change="RadioChange('Female')" ng-model="gender" value="Female" /> Female </label>
+	    </div>
+		
+		<div>
+			<input type="submit" value="Sign up" />
+			<a href="#!/login">Log in</a>
+		</div>
+	</form><!-- form -->
+	
+</section><!-- content -->
+
+
